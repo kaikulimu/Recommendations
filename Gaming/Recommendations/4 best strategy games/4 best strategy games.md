@@ -1,4 +1,6 @@
 ## Invisible Inc
+Very deep strategic game. You will improve as you play and that feels great! Very interesting mechanics and lots of ways to approach the game effectively.
+
 #### Pros:
 - Lots of ways to approach the game strategically. You can either kill a guard, KO a guard, or evade the guard.
 - Alarm level raises each turn, which disencourages turtle-style slow play. Improvement over XCOM: Enemy Unknown.
