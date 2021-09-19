@@ -1,3 +1,5 @@
+## Ranking
+
 1. MTGA
 2. Hearthstone
 
