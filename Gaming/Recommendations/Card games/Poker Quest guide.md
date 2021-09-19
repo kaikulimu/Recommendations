@@ -23,7 +23,7 @@
 - Tips:
     - Cycle opponent's cards to prevent item usage
     
-#### Sorceress (one-shot (Throw cards at them!; "Ultraman Nexus" cuz Fire Gloves + Ultimate))
+#### Sorceress
 - One-shot signature style: "Throw cards at them! => often quick battles
 - "Ultraman Nexus" cuz `Fire Gloves` + Energy Skill
 - Tips:
