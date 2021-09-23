@@ -1,5 +1,7 @@
 ## Ranking
 
+0. Duel Masters
+    - Physical cards game I played with my brothers.
 1. MTGA
     - Peak Rank: Mythic
     ![MTGA_Mythic](/images/MTGA_Mythic.png)
