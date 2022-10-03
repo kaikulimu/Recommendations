@@ -11,6 +11,7 @@
     - Peak Rank: Rank 9 in NA server
     ![Hearthstone_Rank_9_Legend](/images/Hearthstone_Rank_9_Legend.png)
 
+- Yu-Gi-Oh!
 - Slay the Spire
 - War of Omens
 - Poker Quest
