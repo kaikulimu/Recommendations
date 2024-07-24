@@ -33,7 +33,7 @@ Late Game: When you start to calculate points to END
 ## TODO Statistics
 - TODO: Statistics on drawing a certain type of card, or its chance of showing up in your hand/display
 
-## Over-the-Board vs [BGA](www.???.com)
+## Over-the-Board vs [BGA](https://boardgamearena.com/)
 - Two more sponsor cards TODO
 
 ## End Analysis
