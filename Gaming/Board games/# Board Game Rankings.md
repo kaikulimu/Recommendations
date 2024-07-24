@@ -4,11 +4,19 @@
 
 #### Tier 0
 Ark Nova
+- Balance: Great! Multiple paths to success in the early game. Unlike GWT, where delivering to Kansas City and getting extra move speed with black disc are the best move 95%+ of the time
 
 
 #### Tier 1
+Dune: Imperium – Uprising
+- Great Fighting Game: You don't know who will win until the last round
+
+Terraforming Mars
+
 Witcher 3
 - Theme:  Immersive story
+
+Great Western Trail
     
 Splendor
 
@@ -48,12 +56,15 @@ Avalon
 Werewolf
 - Genre: Party game
 
+Pipeline
+- Non-blocking worker placement:  Encourages everyone to AP
 
-#### Tier 3
 Wingspan
 - Balance is poor： Some cards are very overpowered
-- Snowbally:  There are 4 rounds, but Round 1 usually decides everything
-    
+- Snowbally:  There are 4 rounds, but Round 1 decides everything if someone gets a broken engine
+
+
+#### Tier 3
 Wicked Apples
 - Genre: Party game
 - Randomness is too much

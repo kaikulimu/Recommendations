@@ -19,3 +19,8 @@
 - Tyrant
 - Kongai
 - 魔法战争牌
+
+#### Tier 1/2
+Hellcard
+    - Too easy(?)
+    - Good for co-op
