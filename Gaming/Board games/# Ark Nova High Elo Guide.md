@@ -86,6 +86,15 @@ Late Game: When you start to calculate points to END
     - Conclusion: $17 for 7ap + 1CP? = 7-10pt && +$3_income
 - Eyeballing it, I consider one X-token worth $3-4
 
+#### Icons
+- Bear > Bird > Herbivore > Predator > Reptile > Primate > Petting Zoo
+- There are **no** Primates in Europe nor Australia
+- Water > Rock because there are simply more water icons in game
+
+#### Continents:
+- Asia > America > Africa > Europe > Australia
+
+
 ## Action Sequencing
 - **When in doubt, trust action sequencing.**
     - Often I would analysis different lines for two hours, and conclude that the better action sequence line is superior.
@@ -242,17 +251,6 @@ TODO: to count which actions will come up next after a sequence of actions, say 
 
 - People like to do Cards in the last Round a lot, but it's really bad
 
-## Icons
-- Bear > Bird > Herbivore > Predator > Reptile > Primate > Petting Zoo
-- There are **no** Primates in Europe nor Australia
-- Water > Rock because there are simply more water icons in game
-
-## Continents:
-- Asia > America > Africa > Europe > Australia
-
-#### `Side Entrance` Guide
-- Usually build as "Main Entrance" to abuse income boost
-
 ## Association
 *Project rankings*: 5CP base > release project > breeding > 2CP base
 
@@ -358,6 +356,9 @@ Three primary factors:
     - {6 choose 3} If we break after he plays Eagle-Owl, he has to discard 3 within 6 unknown cards
     - Observe that if he discards before Eagle-Owl, he could have discarded cards that synergizes well with cards from Perception 4
     - Therefore, discarding before Eagle-Owl is better
+
+#### `Side Entrance` Guide
+- Usually build as "Main Entrance" to abuse income boost
 
 ## Cards
 - TODO
