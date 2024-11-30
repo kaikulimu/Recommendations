@@ -2326,3 +2326,11 @@ Move #158 Choices (Critical)
 			+ But expect oppo to BREAK a lot
 		- Oppo snap `LB Vulture` => maybe he needs an animal to play next round => more likely he has sponsor in hand to play this round
 Move #168 Verify `Sponsors 5 BR 5` over `Build 5X [4_rock_water near $4], pav cover Clever down Sponsors]` and `X-Sponsors`
+Move #190 Should I Release Wolf before Sec Bird?
+	+ `Sec Bird` makes `Scarlet Macaw` better for oppo, which he is already likely to get
+		+ Gives oppo `Release Bird` access, then he doesn't need to think about project prospects at all
+			+ Since he about to Cards 5 draw 4, this can cloud his judgement
+	- `Wolf` Pack cannot get more than 1ap
+	- `Wolf` gives oppo $3
+		- Might let oppo steal donate $5/$7 from you easier
+			+ Should only make a difference vs `AS Tortoise` or `Giraffe`, in this round
