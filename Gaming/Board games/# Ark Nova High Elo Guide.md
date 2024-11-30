@@ -10,7 +10,14 @@
     - 2024-03-03 https://boardgamearena.com/table?table=482460748 milo324 (116) vs kaikulimu (123#)
     - 2024-03-13 https://boardgamearena.com/table?table=486802373 kaikulimu (130#) vs Employee_427 (125)
     - 2024-05-10 https://boardgamearena.com/table?table=511080206 kaikulimu (131#)  vs human_light (112)
+	- 2024-09-27 https://boardgamearena.com/table?table=568386463 kaikulimu (122#) vs kenchu1980 (119)
+	- 2024-09-29 https://boardgamearena.com/table?table=569245882 kaikulimu (132#) vs bgtrainer (110) 26-Turn beatdown
+	- [710 Elo] 2024-10-09 https://boardgamearena.com/table?table=573091026 kaikulimu (122#) vs DaZaiErXia (110)
+	- [704 Elo] 2024-11-16 https://boardgamearena.com/table?table=589943187 kaikulimu vs human_light
 > TODO: My Immortal Game: https://boardgamearena.com/table?table=483168354 WuDiShaRenWang HK (129) vs kaikulimu (155#)
+> TODO: 2024-09-25 Oppo conceded, but 25-26 turn game: https://boardgamearena.com/table?table=567560751
+> TODO: 2024-09-27 27-turn game: https://boardgamearena.com/table?table=568016631
+> TODO: 2024-09-27 27-turn game: https://boardgamearena.com/table?table=568225321
 > Luckiest Cards Action Ever: https://boardgamearena.com/table?table=535869693 Move #78 kaikulimu (105) vs af145 (142#)
     - Draws into perfect sequence of Talented Communicator -> Wolf -> Savanna in one Cards 5 action
 > Hall of Fall Emu: https://boardgamearena.com/table?table=504337132 Move #219 JDansp (17) vs Robin (56#)
@@ -19,11 +26,20 @@
     - Verify: Sponsor 2 BR2 (+1X +$2) ~> BREAK (+$6) -> Assoc 4XX 2-rep Univ upgrade Build (+2rep) -> Build 5 [2, 1, pav, kiosk] cover rep and H or rep-draw, REP_5 upgrade Animals (+1H? +1rep +1ap -$10 +K$$1 +$$$1) -> Animals 5U Barn Owl + Tas Devil pouch 1 (-1H +2-rep 9ap -$23 +K$$2 +$$$6) -> Cards 5 (BR2 +1-2H) -> Sponsor 5 Spokesperson REP_8 worker (-1H +1rep) -> Assoc 4 PZoo ~> {Assoc Sponsor Cards Animals Build BR2 3-5H 0X 8-rep 11ap 0CP =-3pt $0 $$$16}
 
 ## Terminology
-- PZoo = Partner Zoo
 - Univ = University
+- PZoo = Partner Zoo
+- Amer = Americas
+- Euro = Europe
+- Auss = Australia
 - "unlock" = gaining a bonus from left hand size of map due to Assoc 5 project
 - "cover" = cover a placement bonus on the map
+- "draw" = drawing from reputation range or deck
+- "deck-draw" = drawing from deck
+- "brick" = when you draw cards but didn't draw anything you need
+- "offsuit" = playing animals/sponsors with icons non-matching with base projects
 - END = End of game 
+- *Open Game* = Have a bit of synergy in multiple places => multiple paths to victory
+- *Closed Game* = Hardcode synergy on a narrow path
 
 #### Game State
 Early Game: Until your opening strategy is executed (1st project, REP_8, pair of PZoos/Univs, sponsor upgrade for `Explorer`, etc.)
@@ -38,6 +54,7 @@ Late Game: When you start to calculate points to END
 
 ## End Analysis
 - See details in "END analysis.xlsx"
+- **The Trinity** of Assoc, Sponsors, and Animals contribute to winning => should have a balance between the three
 - On average, a game ends at 150pt, composed of:
     - 60 pt from animals
     - 30 pt from sponsors + pav
@@ -49,7 +66,6 @@ Late Game: When you start to calculate points to END
     - We support 3.5 projects; each giving 3.5 CP (10.5 pt)
 - Income has diminighly return. Only a finite amount of "good money" has **$1.8 = 1 pt** ratio, limited by the number of projects you can support, as well as fill map.
     - Avoid playing animals that do not contribute to project and do not have high value by itself, to avoid spending "bad money"
-- TODO
 - TODO "Point by Turn", "Kiosks", "Cards Seen"
 
 ## Resource Efficiency
@@ -59,6 +75,7 @@ Late Game: When you start to calculate points to END
     - 1 reputation = 1 X = 1 rep-draw = 3 money
     - 1 CP = 8 money
     - Animals with requirements are better because requirements lead to discounts
+- X is strong, so I estimate 1 X = 4.5 money
 - However, his "1 appeal = 3 money" breaks even with an average animal having 1 animal icon and 1 continent icon, which means you get 2 icons for free. Therefore, small animals are more cost-effective than large animals, especially in the early game where appeal is very important. Large animals usually have strong ability for late game and trading that much money for appeal is like a "free Determination", but is a waste of time for early game.
 - Average of top 5 Arena players endgame: has $205, spent $186 for value, has 75 appeal and 25 CP
 - "END analysis.xlsx" suggests *$1.8 = 1 pt*. Since appeal also generates income, **1 appeal = $1.8 + income_fraction**
@@ -84,7 +101,6 @@ Late Game: When you start to calculate points to END
     - `Sponsorship: Lions` gives +$3_income, so like $12 total
     - If you attribute it to Habitat 5, that's another +3pt
     - Conclusion: $17 for 7ap + 1CP? = 7-10pt && +$3_income
-- Eyeballing it, I consider one X-token worth $3-4
 
 #### Icons
 - Bear > Bird > Herbivore > Predator > Reptile > Primate > Petting Zoo
@@ -101,9 +117,24 @@ Late Game: When you start to calculate points to END
 - **Key Insight** -- Doing stronger actions more times essentially translates to free Determination.
 - Assoc and Animals are the strongest actions late game. Assoc and Sponsor are the strongest mid game.
 - Sponsor is very strong early-mid game, can fall off a bit late game
+- **Sequence Invariant**: e.g.) Make sure you want `Build` before `Animals`, or `Assoc upgrade Build` before `Build`
 - Cards essentially buffs other actions. Good early-mid game, often too slow late game; also depends on how good your hand is.
     - However, please prioritize Cards if display has an essential part of your combo
+- **Draw-dynamics**: The worse your hand is, the better Cards action is. And vice versa.
+	- 5-hand Univ also buffs Cards action
 - Hence, Build is the weakest action
+- Due to **Sequence Transfer** and **Sequence Squeeze** (explained below), if you are sequencing two high-prio actions, sequence the one you will do again at low strength first.
+
+- Can maximize Assoc usage by BREAKing right when you are out of worker and have just enough strength to do your next Assoc action
+	- However, no need to hyper priortize Assoc in early rounds if you only have one worker, and won't get a second one soon
+
+- Enhance Boost by sequencing your actions
+    - e.g.) Doing Assoc right before Animals maximizes `Raccoon`'s "Boost: Association"
+
+- **X-Estimate**: Loss of playing an action can be estimated by equivalent number of X tokens, discounted by actions you don't care about
+	- e.g.) `Cards 3` when `{Sponsors Animals Cards Assoc Build}` when you don't care about Build
+		- Then, you "lose" on Assoc action which is 1X, or ~$4.5
+	- Btw, taking Action at 1 and "skipping a turn" entirely will be estimated at $18 = ~7.2ap
 
 TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has small chance of being stolen
 - IMPORTANT: Before you do an obvious Action, think about if other actions would make more sense, esp. if you have X tokens
@@ -114,10 +145,14 @@ TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has
     - e.g. Animals 3 late game if you plan to do Animals twice
 - TODO [Pat Schooley] You can play 2 sponsors before first break, but likely 1 Assoc and 1 animal, so prioritize Sponsor action
 
-- *Observe*: It's natural to sequence Animals right behind Build
-
 - Don't blindly sequence Cards before Animals in the early game. If you have upgraded Animals and 3-hand-size, you might want to play Animals 5U to use one card before Cards 5 drawing, in case oppo BREAK
     - e.g.) https://boardgamearena.com/14/arknova?table=539949404# Move #71: You want to play `Fur Seal` before drawing
+
+- Classic mistake by saizon -- `Boost: Association` only boosts up 1
+	- https://boardgamearena.com/14/arknova?table=578645187# Move #311
+	- He plans `Assoc 5 Asia PZoo -> Animals 5 Sloth Bear boost Assoc -> Assoc 5 Habitats 3`
+	- However, he actually only boosted up Assoc by 1 instead of 3, because he already lost 2 positions when doing `Assoc 5 Asia PZoo`
+	- And the worst part is, I can straight take PZoo and donate to deny him the `Sloth Bear`
 
 #### X Token Usage
 - Spend X token for "priority action" right before a Clever/Boost_down, because you want the Clever/Boost_down to boost "priority action" up by one
@@ -138,28 +173,50 @@ TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has
             - TODO worse?
             - Clever is able to bump up Assoc action
             - bad: You need to cover Clever
+- *Observe*: It's natural to sequence Animals right behind Build
+	- Top players will X-Build_4 when Animals at 5		
+		
+- You don't always have to X-back at 5. Depending on action sequencing, X-back at lower strength could make sense.		
+	- [dwarvintime] Mysterious X-Cards at 3/4 to delay BREAK
 
 - Loss of sequencing due to Hypnosis or Constrcition can be solved by spending 2 Xs, except double Constriction which requires 4Xs
 
-#### Transformative Property
-- Let `A, B, C` be actions. Lower-strength action later on can transform sequencing change from `A behind B` to `A behind C`
-    - e.g.) https://boardgamearena.com/table?table=511080206 Move #124:
-    - You have {Animals Build Assoc Sponsor Cards}. You plan to do Assoc 3 PZoo twice. You are deciding between Assoc 3 and Cards 5.
-    - Assoc 3 -> Cards -> Sponsor {Sponsor Cards Assoc Animals Build} -> Assoc 3 -> Build ~> {Build Assoc Sponsor Cards Animals}
-    - Cards -> Assoc 3 -> Sponsor {Sponsor Assoc Cards Animals Build} -> Build -> Assoc 3 ~> {Assoc Build Sponsor Cards Animals}
-    - You *transform* from "Assoc behind Cards" to "Assoc behind Build"
+#### **Sequence Transfer**
+- Let `A, B, C` be actions. Lower-strength action later on can transfer sequencing change from `A behind B` to `A behind C`
+	- e.g.) https://boardgamearena.com/table?table=511080206 Move #124:
+		- You have {Animals Build Assoc Sponsor Cards}. You plan to do Assoc 3 PZoo twice. You are deciding between Assoc 3 and Cards 5.
+		- Assoc 3 -> Cards -> Sponsor {Sponsor Cards Assoc Animals Build} -> Assoc 3 -> Build ~> {Build Assoc Sponsor Cards Animals}
+		- Cards -> Assoc 3 -> Sponsor {Sponsor Assoc Cards Animals Build} -> Build -> Assoc 3 ~> {Assoc Build Sponsor Cards Animals}
+		- You *transfer* from "Assoc behind Cards" to "Assoc behind Build"
+- *Sequence Transfer* can only occur if you want to an action soon after at low strength, e.g.) `Assoc N -> Assoc 3 PZoo`
+	
+#### **Sequence Squeeze**
+- Deciding factor for difficult Clever decisions
+	- e.g.) https://boardgamearena.com/10/arknova?table=557434246# Move #60:
+	- Decide whether to clever down Cards or Assoc. Let X and Y be possible positions of [Cards, Assoc], where you clever down X
+	- After Sponsors 4 action, sequence will be {Sponsors X Animals Build Y}, when oppo is extremely likely to BREAK.
+	- If `X == Cards`, then you do `Assoc 3 -> Build 5 -> Animals 5 -> Cards 5 -> Sponsors 5 -> Assoc 5`
+	- If `X == Assoc`, then you do `Cards 5 -> Assoc 3 -> Build 5 -> Animals 5 -> Sponsors 5 -> Cards 5 -> Assoc 5`
+		- You effectively squeezed in a Cards action
+	- Due to having `Science Lab` passive, you decided to *not* squeeze in Cards action
+- Related concept to **Sequence Transfer**
 	
 ## Upgrade Order
 - **For the same value, gaining in fewer turns is better.**
 - According to "END analysis.xlsx", a winner ends the game with >= 150pt in <= 33 turns. Hence, aim for **> 4.5pt per turn**.
 
+- Don't blindly rush upgrades. Often delaying an upgrade for immediate benefit is worth it.
+	- Taking single PZoo + single Univ to secure project is probably worth it, because you lose one upgrade this round, but have clear path to access *all* upgrades. Another story if you are losing two upgrades by not taking second Univ.
+
 > Roughly from best to worse
 1. Association
     - Upgrade **early!** => Rush donation to hit PZoo/Univ at CP_5 or CP_8 (Univ/PZoo are the best)
         - If you have no early project, can rush donation to hit CP_2
+			- Esp. if you played a card that gives you 1CP
         - If you have an initial project with 3/4 CP, and Uniz/PZoo at 5-CP track reward
         - In addition, you will fill your Univ/PZoo slots faster => even more reason to upgrade Assoc
     - Upgrade => take 3rd/4th partner zoo for `partner zoo CP bonus` and/or `4th worker map CP bonus`
+		- Esp. if you don't have that many projects to do, and thus have spare workers
     - Upgrade => spend X tokens to double action (e.g. mid game Assoc 3+2, late game Assoc 3+5)
         - Assoc 3+2 is very efficient compared to simply Assoc 3, like if you took 2 Univs early on
     - Upgrade => cheap donations (2/5 spots are excellent; 7 spot is decent)
@@ -167,8 +224,11 @@ TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has
 2. Sponsor
     - Upgrade => Play upgraded sponsors
     - Upgrade => Play high-value sponsor from display
+	- Upgrade => Play many sponsors in general => better sequencing
     - Upgrade => Play multiple sponsors in one turn => free Determination
-    - Upgrade => "Break 7 Gain 14" especially if you gain an upgrade before 1st break
+	- Upgrade => No sponsor to play, but need more money
+		- "Break 7 Gain 14"
+	- Upgrade => Plan to fill map => need more money
 3. Animals
     - Upgrade => Animals 5 gives 1 reputation
     - Upgrade => Play Level 2 animals
@@ -183,11 +243,12 @@ TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has
         - It's only slight money/appeal advantage; not essential if something else is more urgent
     - Upgrade => Build about your map for flexibly and cover placements bonuses more easily
     - Upgrade => Bird Aviary
+	- Upgrade => Synergy with sponsors including `Side Entrance`, `Engineer`, `Archaeologist`, `Hydrologist`, `Geologist`
     - Recommended to move back for X token
 
 - Focal point of each upgrade
-    - Early game: Build, Sponsors
-    - Mid game: Cards
+    - Early game: Build
+    - Mid game: Sponsors, Cards
     - Late game: Animals, Assoc
 
 
@@ -207,13 +268,15 @@ TODO Explain why you would do Cards before Assoc Round 1 when Australia PZoo has
 		- Also, in R1 `Sponsor 5 BR 5 BREAK` is very sensible after release
     
 - TODO **Pseudo-Upgrages**: unlock snap > unlock 2-size ~= unlock $5
-- **Mad Enhancement**: Skip all PZoos, hence skipping Assoc upgrade, and instead focusing on doing many projects
+- **Snap over Cards; 2-size over Build.**
+- **Trace On**: Skip all PZoos, hence skipping Assoc upgrade, and instead focusing on doing many projects
     - Preferrable only if you can keep supporting projects efficiently with your Assoc actions
         - Hence, you need to be able to play many projects
     - Can be a desparate move if you have difficulty unlocking second worker
     - TODO At around 30 appeal, skipping upgrade to go for one more project is preferrable
     - TODO How much value does an upgraded action actually give you?
    
+- **5-hand Upgrade**: Treat passive of 5-hand Univ as an upgrade
 
 - TODO How to decide which to upgrade first???
 - Default upgrade order: Build -> Animals -> Cards -> Association
@@ -251,24 +314,41 @@ TODO: to count which actions will come up next after a sequence of actions, say 
 
 - People like to do Cards in the last Round a lot, but it's really bad
 
+#### Number of Upgrades
+TODO
+
+#### [sorryimlikethis] When to take CP_2 Worker over Upgrade
+- When the round will be long and you have time to spend 2nd worker
+- *Power Spike* of 3 upgrades sooner, but you will never have 4th upgrade 
+- If you will be using workers to spam projects nonstop
+- When map has good last_worker bonus CPs
+
+- If you take CP_2 worker, you will likely skip Build upgrade
+	=> If you don't need upgraded Build yet, consider CP_2 worker
+
 ## Association
 *Project rankings*: 5CP base > release project > breeding > 2CP base
 
 - Unlock Map Bonus Priority:
     - **Now not later.**: Whatever benefits you now is an extra good activation of the effect. Considering the total game is 5-6 rounds, one good activation is a big deal
 1. Snapping
+	> Influenced by **Draw-dynamics**
+	- *The reason is gain 2nd worker early is to access more upgrades, but if you unlock Snap it's a Pseudo-Upgrage, thus it's fine to unlock Snap over worker*
     - Unlock Snapping before Assoc worker *only* if you can break soon this round and gain another worker (or break soon again) by next round
     - Conjecture: Unlock only if you have something good to snap immediately
     - Effectively increases hand size by 1
+	- Potential to boost down Cards or X-Cards
+	- Enhances both `Open Game` and `Closed Game`
 2. Association Worker
     - You want to prolong the round
+	- **Worker-Sponsor Equilibrium**: If you plan to play sponsors, should take worker. If you plan to `Sponsors N BR N`, should not take worker.
     - [JDansp] "Only good if you took PZoo -> Project to get 2nd PZoo in Round 2"
 3. 2-size enclosure
-	- `unlock 2-size -> X-Build` is better than `unlock $5 -> Build N [2]`
+	- `unlock 2-size -> X-Build` is better than `unlock $5 -> Build N [2]`, esp. when you don't upgrade Build
     - Gives lots of tempo if you have good setup
     - Good for rushing `Native Farm Animals`, `Native Seabirds` and `Native Lizards`
     - Take it over $5 if you have loads of excess money or if you are building a 4-size/5-size and still have enough money to play on that 2-size
-    - Better if you can Clever/Boost down Build
+    - Better if you can boost down Build
     - If you plan to fill map
 4. $5
     - When you do release as first project, unlock $5 first is good because you are very low on income
@@ -284,13 +364,20 @@ TODO: to count which actions will come up next after a sequence of actions, say 
 3. 3rd Partner Zoo (great for `Outdoor Areas`)
 4. Play `Talented Communicator`
 5. Play Full-throated animal
-6. Have 2 CP 
+6. Have 2 CP
+
+- Ways to counter oppo having 2nd worker only
+1. Advances the BREAK
+2. Spam sponsors within the round
+3. If money lead, build and/or play animals
 
 - **Dangerous Game**: Completely skip PZoo or Univ is viable, only if you can ensure a long stream of projects to support
     - Skipping Univs will likely deny yourself REP_8 worker, unless you have other ways to gain rep, e.g.) upgraded Animals early and used it multiple times
     - If you only want an extra worker, you can take 3rd PZoo instead of 2 Univs
 
 - Consider Univ block
+
+- If your animal requires a non-base-project PZoo, don't be too afraid of oppo stealing your PZoo Round 1, becuase of *removal effect*, meaning oppo is less likely to also need that PZoo.
 
 - Try to rush 1-3 early projects at 2 CP, then focus on getting 4-5 CP projects
 - Pay attention to synergy for early Release project, Breeding Program project, `Small Animals` project, `Research` project, and `Aquatic/Geological` project
@@ -327,21 +414,34 @@ TODO: to count which actions will come up next after a sequence of actions, say 
     - Map shape abuser: `Native Farm Animals` > `Native Seabirds` > `Native Lizards`
     - Reasons to upgrade Sponsor: `Explorer` > `Talented Communication` > `Science Lab`
 - TODO If you played Side Entrance, embrace large animals
-- Around 12-16 total sizes from Sponsor enclosures will fill map; more and you run out of space easily
+- Combo: **Science Exodia**
+	- `Science Museum` can be a win-con on its own
+- `Science Lab` allows you to deprioritize Cards action, potentially saving tempo
+- Water/rock combos:
+	- `Aquarium` + `Hydrologist`
+	- `Cable Card` + `Geologist`
+- *Opportunity Cost* of $N/$2N whenever you play a sponsor instead of doing Sponsor N BR N
+- Playing one great sponsor is more action-efficient than playing two average sponsors
 - When you have an income lead, consider BREAKing to widen the money gap, instead of delaying if oppo is able to spam Build to catch up on income
     - In that situation, oppo $$$1 is worth more than your $$$1
+- If you want to play many sponsors, delaying BREAK to buy more time is favorable
+	- Even better if you have upgraded Sponsors
+- Late game sponsors have massive tempo consequences
 - [JDansp] With `Spokesperson`, you can take 2-rep Univ for REP_5 upgrade on Round 1, then take 2-Science Univ for REP_8 worker on Round 2
     - [Julie_1104] With `Spokesperson`, if you REP_5 upgrade Animals on Round 1 and are able to play "Animals 5U" twice, then you can also take 5-hand Univ for REP_8 worker on Round 2
 - [JDansp] With `Zoo School`, on every map except Silver Lake, you can cover rep and take 2-rep Univ to do REP_5 upgrade Build before your first Build action => can be great!
 - [JDansp] With `Release of Patents`, you can take 2-Science Univ then play it to gain CP_2 reward
 - [JDansp] With `Waza Special Assignment`, small is usually better than large, because it's easier to play 2N small animals than N large animals
+- [JDansp] `Waza Small` can facilitate a big point jump to END
 - [JDansp] Birds and Predators can easily draw into another Bird/Predator => `Ornithologist` and `Expert Pred` are better than its equivalents
+- [sorryimlikethis] `Diversity Researcher` synergizes greatly with `Native Farm Animals`
 
 #### When to Cause Break
 Three primary factors:
 - Money & income
 - Association workers left & action position
-- Number of cards in hand; pay attention to 5-hand-size Univ
+- Number and quality of sponsor cards
+- Discard considerations; pay attention to 5-hand-size Univ
 
 - Triggering BREAK is fantastic early-mid game as you steal an X from oppo. Late game, not so good.
     e.g.) [dwarvintime] Early game, Break at 5, both players want to do Cards 5. If you do it second, you gain the X token
@@ -361,10 +461,13 @@ Three primary factors:
 - Usually build as "Main Entrance" to abuse income boost
 
 ## Cards
-- TODO
-- Card priority: **Near good > Future good**
+- **"Cards are the soul of Ark Nova."** - Vincent Yan
+	- "Pawns are the soul of chess." - François-André Danican Philidor
+- Card priority: **Near Good > Future Good**
+	- *Near good* is even more emphasized when your hand size is 3
+	- [Darcelmaw] *Near Good* of having a playable animal > having a playable sponsor. You could always Sponsors 5 BR 5 +$5 as a "default" sponsor
 - **Don't sabotage yourself** trying to deny your opponent. It's rarely worth it.
-- **Believe in the Heart of the Cards**: Try to draw from deck as much as possible. Only Cards 5 snap if you really need to
+- [sorryimlikethis] **Always draw from deck**, as an exaggeration. Only Cards 5 snap if you really need to
     - Hence, unlock snapping is very strong
     - If you snap once, you might have too few cards in your hand that you need to snap again => Vicious cycle
 - **Der Untergang**: Cards move down on display, e.g. when break happens or when you rep-draw. Remember to account for it.
@@ -377,20 +480,31 @@ Three primary factors:
         - If you snap a project now, then you will still be missing two animals and one sponsor. Hence, you might be forced to snap again next round.
         - Instead, if you draw from deck and keep one animal and one sponsor, then you will only be missing one animal and one project.
 - **Gemini**: When there are two cards on display creating a strong combo, consider snapping one and repu-draw the other
+- **Doubly Good**: When a card on display is very good for both player, e.g. `Polar Bear Exhibit` when Habitats 5 is base project
 - **Blockers**: e.g.) If you have an Eagle, it's much less likely oppo also has an Eagle
+- **Project Prospects**: When drawing for non-base projects, consider how many of them are actually playable and/or profitable to play
+- *Cards 3 snap Ultra-Rare combo card* is worth it, esp. if both players can use it
+- To decide whether to snap to deny, consider *combo rarity* of snapped cards vs 3 random cards for you + DISPLAY_6 show
+- *Lemma*: Drawing from deck gets worse in late game, largely because many sponsors become almost useless
+- X-Cards to delay BREAK
 - Don't be afraid of discarding cards. Discarding a card is worth ~2.5 money, but playing a more optimal card can easily outvalue 2.5 money
 - When looking at cards on display, *also* consider what your opponent wants
 - Which display cards do you pay attention to? Those that match with any of the projects. Don’t tunnel-vision on a single project
     - Projects cards are the rarest => worth snapping if it matters to you or your opponent
     - Also good synergies cards like `King Vulture`
+- `Science Lab` allows you to deprioritize Cards action, potentially saving tempo
 - TODO don’t just think about what you want; deny important cards of your opponent! Even do Upgraded Cards 3 for this!
 - Don't touch the display if you don't have to -- you might give your opponent miracle out!
 - If you welcome a sponsor draw, Cards 5 draw 3 is a lot stronger. There are 66 sponsors in the BGA adaptation.
 - Care: Release projects are more easily leeched than breeding programs
 - Keeping Eagle early game has the benefit of more easily utilizing aviary
+- Whoever has higher rep benefits more from display replenishing
+- [sorryimlikethis] If `Migration Recording` is in play, then a matching 3-size animal has much higher priority, as both players can play it
+- When you play a card from reputation that you would like to play anyways, it's like saving you one draw => you have opportunity to draw one more card from deck
 
 #### What to discard and what to keep
 - **Combo Rarity**: Try to keep the rarest combo cards in your hand
+	- "Ark is not a one card's game"
 - Let's use Duel Master's rarity system: *Common*, *Uncommon*, *Rare*, *Very Rare*, *Ultra Rare*
     - e.g.) https://boardgamearena.com/table?table=530224307 Move #82
         - If oppo does not BREAK, `American Bison` and Rhino is such as deadly combo that it's *Ultra Rare*.
@@ -468,46 +582,15 @@ Three primary factors:
     
 - TODO When you fish for a project, Rhino counts as one
 
-## Build
-- During early build, feel free to leave some empty spaces
-    - You can get to placement bonuses faster
-    - Can highroll Native Farms or Zoo School, etc.
-- Early build to cover buy sponsor is a very strong tempo move, usually worth the $ spent
-- Kiosks are overrated; you only need 2-3 kiosks per game
-	- As you get better at the game, you can END with fewer breaks => kiosks are less useful
-- Try to build Bird Aviary and Reptile House near both rock and water
-    - 11 Birds    can live in Aviary,        3 next to Rock, 1 next to Water (`Bald Eagle`)
-        - All four 5-size birds w/o near water is a huge deal!
-    - 25 Reptiles can live in Reptile House, 5 next to Rock, 9 next to Water (including all 4-size and 5-size reptiles)
-- Bird Aviary > Reptile House
-- When playing Side Entrance, you still want to have efficient actions. Try not to waste too much time doing Build 1
-- At around 30 appeal, **do not** build kiosks anymore! Would rather have a 2-size enclosure just in case
-- TODO Calculate the total estimated income for each kiosk
-- When you fill map for 7 appeal, if you have 8 wasted spaces (= $16) it's still worth it
-- If you're very unlikely to fill map, don't worry about leaving holes on your map
-- If covering a placement bonus gives you very marginal benefits, save it for later
-- [JDansp] If you have lots of spare money, can build a random 5-size to prepare for future
-- **Prebuild**: Build an enclosure for the future, instead of X-Build or Build N [pav]
-- [JDansp] Leave some empty spaces for good placement Sponsors like `Penguin Pool` or `Zoo School` if it's convenient
-    - Leaves some border spaces in general for `Side Entrance`, `Native Farm Animals`, `Zoo School`, etc.
-        - `Native Farm Animals` cover H draw paying off greatly vs betacockroach: https://boardgamearena.com/table?table=522554724 Move #148
-
-#### `Archaeologist` Guide (original maps)
-- Most powerful: Three PZoo on `Outdoor Areas`
-- Spam rep on `Silver Lake`, `Ice Cream Parlors`, `Park Restaruant`
-- Free Univ(s) on `Research Station`
-- `Hollywood Hills` is the worst map for `Archaeologist`
-
-#### Kiosk vs Pavilion
-- TODO
-- See "income per next ap" section of "END analysis.xlsx" for estimation of *income_fraction*
-
 ## Animals
 - Always **double-check requirements** of Animals! So many games are lost due to a missed requirement...
+	- e.g.) `White Rhino` requires 1 Science, `Koala` near rock, `CT Tamarin` requires 2 Science
+	- On BGA, hover over animals to make sure you can meet all requirements
 - You only play 9.3 animals per game on average. Don't waste time on non-critical animals
 - **One Distraction Rule (ODR)**: Generally, you can afford one distraction of ~3 animals (e.g. 3 Petting, 3 Herbs with `Meerkat Den`), and can still do one 2CP base project and one 5CP base project.
-- Overpowered: `Sun Bear` > Rhinos ~= Eagles > `New Zealand Fur Seal` > Elephants > `Koala` (next to Rock: Round 1 +1rep +12ap)
+- Overpowered: `Sun Bear` > Eagles > `New Zealand Fur Seal` > Rhinos > Elephants > `Koala` (next to Rock: Round 1 +1rep +12ap)
     - But don't blindly keep Rhino! `American Bison` on a 5-CP America project board is better than a Rhino
+		- Rhino is a lot stronger if you play an *offsuit* game
     - If you plan to play `New Zealand Fur Seal`, **must** upgrade Animals while delay upgrading Build
     - Playing an Elephant before CP_10 is triggered is slightly better, because you have the option to discard both Elephant endgames
     - If you can can follow up with strong actions, Elephant is effectively free Determination, because you are gaining points roughly equal to two late game actions
@@ -519,13 +602,112 @@ Three primary factors:
 - High-value small animas: `Tasmanian Devil`, `Scarlet Macaw`
 - Attack: Hypnosis (late game) > Pilfering (early game) > Constriction (late game on Association) > Venom (mid game)
     - Hypnosis on oppo Assoc 3 can be devastating, potentially stronger than Determination
+	- If you anticipate oppo pilfer and prefer not to give $5, can prepare to give away cards
 - Petting Zoo animals are below average, unless there is `Species Diversity` project
+- With `RS Douc`, you can take 2-rep Univ, Build cover rep, and play it to have R1 upgrade
 - If you plan to play two animals, remember to play the Sunbathing one first
 - TODO: Always pay attention to rock/water requirements, especially double
-- Enhance Boost by sequencing your actions
-    - e.g.) Doing Assoc right before Animals maximizes `Raccoon`'s "Boost: Association"
-- On BGA, hover over animals to make sure you can meet all requirements.
+	- Large animals often require water_water
+- Elephants are not the best at rushing END, as they contain lots of hidden endgame points
 - [dwarvintime] White Rhino allows you to skip upgrading Animals and still cross 100pt
+- For `Fur Seal`, you often can play it Round 2 after playing a cheap animal Round 1
+	- But that also means you won't upgrade Build and won't have kiosk income
+- Can mitigate Pilfering by preparing your hand to give away one card, or such that $5 loss is okay for you
+- [Aaron Bartel] If CP_5 and/or CP_8 has Univ/Pzoo to rush, and if you have suitable animals, consider going Rhino first project
+
+#### Average pt per Animal Size
+> Estimate pt = ap + CP + rep + Posturing + 5 * Iconic + 3 * Pack + Pouch  ||  kaikulimu's avg from 10 games in Q3/Q4 2024
+> See "Enclosure Occupancy" section of "END analysis.xlsx"
+- 5-size: 182 pt / 19 = 9.56 ~= 9.5 pt (8.5pt equity) ||   7.8 pt
+- 4-size: 162 pt / 20 = 8.10 ~= 8   pt         		  ||   7.9 pt
+- 3-size: 183 pt / 24 = 7.63 ~= 8   pt  			  ||   8.7 pt
+- 2-size: 167 pt / 31 = 5.39 ~= 5.5 pt  			  ||   5.7 pt
+- 1-size:  98 pt / 24 = 4.08 ~= 4   pt  			  ||   3.9 pt
+- Petting:                              			  ||   5.4 pt
+
+- *Equity Realization* per Animal Size:
+	- 3-size animals over-realizes equity because powerful animals such as [`Indian Peafowl`, `Koala`, `Gala Tortoise`, `Giant Panda`] are often playable
+	- 5-size animals under-realizes equity because powerful animals such as [`Mandrill`, `Proboscis Monkey`, `SB Tiger`] are often unplayable
+		- 134 pt / 16 = 8.375 ~= 8.5 pt
+- Equity of 3, 4, and 5 size animals are not too different
+
+#### Animal Size Distribution
+- `Birds`, `Herbivores`, `Predators` have [small, medium, large] ratio of 10:5:10
+- `Primates` leans towards small animals, with a ratio of 8:5:5
+- `Reptiles` leans heavily towards small animals, with a ratio of 17:4:4
+- `Bears` have an condensed ratio of 4:3:2
+
+## Build
+- During early build, feel free to leave some empty spaces
+    - You can get to placement bonuses faster
+    - Can highroll Native Farms or Zoo School, etc.
+- **Board Coverage**: Try to build towards as many placement bonuses as possible. The earlier you get them the better
+	- Be more careful if you do not plan to upgrade Build
+- *Lemma*: You will have roughly same amount of empty enclosures before map is full, whether you upgrade Build or not
+	- If you upgrade Build, you gain 3-4 extra spaces, but you also will build plenty of kiosks/pavilions
+	- Upgrade Build does allow Aviary/Reptile House though
+- Early build to cover buy sponsor is a very strong tempo move, usually worth the $ spent
+- **One Hole Principle**: Okay to leave one hole early game for placement bonuses, but not more if you are trying to fill map
+- Kiosks are overrated; you only need 2-3 kiosks per game
+	- As you get better at the game, you can END with fewer breaks => kiosks are less useful
+- Try to build Bird Aviary and Reptile House near both rock and water
+    - 11 Birds    can live in Aviary,        3 next to Rock, 1 next to Water (`Bald Eagle`)
+        - All four 5-size birds w/o near water is a huge deal!
+    - 25 Reptiles can live in Reptile House, 5 next to Rock, 9 next to Water (including all 4-size and 5-size reptiles)
+	- *石鸟水蜥* a.k.a. *Rock Aviary, Water Reptile House*
+- Bird Aviary > Reptile House
+- Try to save a spot for 5-size_water_water
+- If you build a random 3-size, prefer to be next to rock
+	- 24 medium animals, 5 requires rock, 3 requires water
+- When playing Side Entrance, you still want to have efficient actions. Try not to waste too much time doing Build 1
+- At around 30 appeal, **do not** build kiosks anymore! Would rather have a 2-size enclosure just in case
+- TODO Calculate the total estimated income for each kiosk
+- When you fill map for 7 appeal, if you have 8 wasted spaces (= $16) it's still worth it
+- If you're very unlikely to fill map, don't worry about leaving holes on your map
+- If covering a placement bonus gives you very marginal benefits, save it for later
+- If base project is Australia, rememember both `Dugong` and `Pelican` requires water_water
+- [JDansp] If you have lots of spare money, can build a random 5-size to prepare for future
+- **Prebuild**: Build an enclosure for the future, instead of X-Build or Build N [pav]
+- [JDansp] Leave some empty spaces for good placement Sponsors like `Penguin Pool` or `Zoo School` if it's convenient
+    - Leaves some border spaces in general for `Side Entrance`, `Native Farm Animals`, `Zoo School`, etc.
+        - `Native Farm Animals` cover H draw paying off greatly vs betacockroach: https://boardgamearena.com/table?table=522554724 Move #148
+- Given some amount of income, having more ap less kiosks is probably better
+	- Kiosks do give you higher income potential for future rounds, but you need to spend a bunch of those money to catch up on points => straight ap is better
+- Having more empty enclosures is an inefficient use of money in early game, but an advantage in late game
+- Think about future prospects of rock and/or water spots
+
+#### Enclosure Occupancy
+> See "Enclosure Occupancy" section of "END analysis.xlsx"
+- kaikulimu uses ~21.2 active enclosure spaces, and ~4.8 saved spaces from release/Aviary/Reptile House/Flock/Outdoor Areas => ~26 spaces without saving
+- To be safe, try to have ~25 active enclosure spaces, hoping for ~5 saved spaces => ~30 spaces without saving
+
+- On average, one active ensloure space gives ~2+ ap
+- Factors that affect num required enclosure spaces without saving (based on non-end pt generated), such as:
+	- Fill map for 7ap, with more pavs: ~(3.5 + 0.5 * pav) less spaces
+	- Donate:           				~(1.5 * donate) less spaces
+	- More direct pt/CP from sponsors => less spaces
+	- More CP from projects           => less spaces
+	- Higher rep 					  => less spaces
+	- Space-efficient animals such as `CT Tamarin` and `Giant Panda`
+
+#### Fill Map
+- Aim to fill map if you played `Side Entrance`, `Engineer`, or maybe `Archaeologist`
+- Aim to fill map if `Architectural Zoo` is likely endgame
+- If fill map, you will need loads of money and will have lots of enclosures => Tend to upgrade both Build and Sponsors over Assoc
+- If you want to fill map, delaying BREAK to buy more time is favorable
+- Around 8 total sizes from Sponsor placements will fill map; more and you will run out of space easily
+- Fill map slightly better on alternative maps since placement bonuses are more spread out
+- e.g.) Fill Map Masterclass vs DaZaiErXia (~700 Elo): https://boardgamearena.com/table?table=573091026
+
+#### `Archaeologist` Guide (original maps)
+- Most powerful: Three PZoo on `Outdoor Areas`
+- Spam rep on `Silver Lake`, `Ice Cream Parlors`, `Park Restaruant`
+- Free Univ(s) on `Research Station`
+- `Hollywood Hills` is the worst map for `Archaeologist`
+
+#### Kiosk vs Pavilion
+- TODO
+- See "income per next ap" section of "END analysis.xlsx" for estimation of *income_fraction*
 
 ## Opening Theory
 - Don't always be afraid of opponent taking your desired Univ/PZoo. Should go for highest EV play
@@ -552,14 +734,20 @@ Three primary factors:
 - TODO Watch video by NoWondersTV
 - Keep cards in starting hand: **Near good > Future good**
 - Try to keep multiple sponsors. The early you play it, the stronger it is.
+- Keep **Speculative** cards, such as `Science Museum` or `Bamboo Forest` or even `Secretary Bird` if you don't have anything better
+- Consider speculative **Late Game Anchors** such as `Proboscis Monkey`
 - Keep at least one project if possible
     - If choose between two projects, Release Europe is less valuable if Europe 2 is a project slot
-- Out of the 18 playable Birds in Round 1 without Science requirement, 7 of them requires a PZoo, 1 requires one Science, and 1 requires two Science => Bird Breeding is a much more logical keep
+- Consider keeping an animal simply for pilfering
+- [TODO Check other species] Out of the 19 playable Birds in Round 1 without unrealistic requirements, 6 of them requires a PZoo/habitat, 1 requires one Science, and 1 requires two Science => Bird Breeding is a much more logical keep
 - A non-matching small animal can still be worth keeping. Else, you cannot stargaze
     - A form of **Near good**
     - Hence, keeping one Petting Zoo in starting hand is not bad
 - **Hand Clogging**: Beware of clogging your hand whenever you keep "future good" cards, including `Native Animals` et al.
 - Combo: 2-Science Univ into `Release of Patents` for instant CP_2 reward
+- [pppppdian] **Scaling Elephant**: Keep non-base-matching Elephant in starting hand, to scale for late game by accumulating lots of income
+- **CP_2 Rush**: If you have a card that gives 1CP, consider combo with early upgrade Assoc donate $2 for another upgrade
+	- But, upside of early Assoc upgrade is limited
 
 #### How to read your opponent 
 TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies don’t want break, draw 3 means bad hand or don’t want anything display card or sunbathing (??)
@@ -598,7 +786,8 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - income: 16  24  32  40  48
     - If there are 6 breaks, most likely the first two breaks combined lead to \{point = 0, income = 16\}
     - Sponsor X Break X generally lead to higher total number of breaks
-- Hence, start thinking about END at around 60 appeal, or 50 appeal if you have two big projects
+- Hence, start thinking about END at around 30 appeal
+	- If you have really good actions lined up, you can END within the round from ~30 appeal
 
 ## Tips
 - **Near Good, Open Future, Same for Deny** - learned from analyzing bsyragb's games.
@@ -636,6 +825,7 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - Determination is the most overpowered map bonus during late game
         - Thus, save for it when unlocking map bonuses
     - `Free-Range New World Monkeys` very good on this map
+	- Easier to play large animals early on
 2. Rescue Station
     - Geo 16, Hydro 20
     - Start near a digging spot
@@ -646,6 +836,12 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - Geo 19, Hydro 15
     - Start near free partner zoo spot
     - `Archaeologist` is extremely overpowered, because you gain 3 partner zoos for free
+	- *Worst map* for fill map
+	- *Almost always upgrade Build!*
+		- No $5 placement bonus => you are poor => wanna spam build kiosk/pavilion
+			- However, unlikely to fill map => Architectural Zoo is weaker
+		- Due to `Outdoor Areas` passive, you are very unlikely to build 4-size/5-size, often not even aviary
+		- Very natural to do `Build 5 [kiosk, pav, 2 near Outdoor Areas?, 1 near Outdoor Areas?]`
     - Last water spot for `Hydrologist` is inconvenient
     - Cute play: Gain 3 partner zoos in Round 2 to gain 2nd worker
     - It's okay to cover one "Outdoor Areas" spot to play Aquarium on bottom right
@@ -658,14 +854,24 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - Optimal play: Association 3 for partner zoo in Round 1, then build on free Univ spot in Round 2. Difficult for opponent to block Univ
     - Petting Zoo is better on starting hard for covering Univ spot
     - Can play `New Zealand Fur Seal` Round 1
+	- `Eurasian BB` and `Panda` are very strong
+	- `Side Entrance` can be used to both connect Station and gain Univ
+	- Unlock double Clever is very strong
+	- Care! Lots of surprise Pilfering possible
+4.a. Research Station.a.
+	- Starting near the Station is very good now
 5. Commercial Harbor
     - Geo 23, Hydro 21
     - Start near "Commercial Harbor"
 	- Cards upgrade and unlock snap are insured at +$3
-    - Consider upgrading Cards early to sell more cards => don't need kiosks that much => can skip upgrading Build
-        - Should upgrade one of Build or Cards early, but perhaps not both. Sometimes top players upgrade Cards last even
+    - Consider upgrading Cards early to sell more cards; still not as much income as a well-placed kiosk from upgraded Build though
+        - Should upgrade one of Build or Cards or Sponsors early
+		- Sometimes top players upgrade Cards last even
+	- Consider Cards 4 for efficient selling
     - Predators are very good on this map due to Sprint and Hunter abilities
-    - Consider Cards 4 for efficient selling
+    - Easier to play large animals early on
+	- Care! Right-hand-side has no spot for 5-size_water_water
+	- *Trick*: unlock 2-size cover x2 during BREAK
 6. Ice Cream Parlors
     - Geo 27, Hydro 11
         - `Hydrologist` is bad because water spaces are sacrce; and you want to leave water spaces open for late game
@@ -674,8 +880,9 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
         - Hence, Petting is good on this map
     - Else, start near a parlor spot
     - Rush complete ICP might not be worth it if you do not have any placement Sponsor to help
-    - Incentivized to fill map for 7ap
+    - *Best map* for fill map
     - Bad map for `Aquarium`
+	- *Trick*: unlock 2-size cover kiosk complete ICP during BREAK
 7. Hollywood Hills
     - Geo 15, Hydro 19
     - Start near 5 money/reputation/sponsor card spot
@@ -684,6 +891,7 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - Cover H early is good for gaining knowledge
         - Due to tendency to hoard sponsors, 5-Hand Univ becomes more valuable
         - Also, sponsors are stronger early on, often worth a discard
+	- Rounds can be longer => 2nd worker more valuable
 8. Park Restaurant
     - Geo 25, Hydro 25
     - Start near "Park Restaurant"
@@ -698,23 +906,34 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
     - Geo 17, Hydro 15
     - Start near "Observation Tower"
     - Worse map because rock and water are highly separated => very inflexible
+	- Petting Zoo animals are weaker
+	- Unlock Marketing synergizes well with unlock snap
+10.a. Observation Tower.a.
+	- If oppo build 2-size_rock_rock cover rep as first build, beware of `Alpine Ibex`
+	- Care! Left-hand-side has no spot for 5-size_water_water
 
 ## Turn-Based Guide
+- **One Move at a Time.**: Whenver oppo takes a turn, something might change your next move. So always re-evaluate.
 - **It’s not about winning the game; it’s about making the best move.**
-- **One Move at a Time**: Whenver oppo takes a turn, something might change your next move. So always reconsider.
+- **Brainstorm Before Calculate (BBC)**
 - **Always think a few moves ahead. Do not play impulsively.**: You have made countless mistakes by playing too fast.
     - Especially when you are about to make a good move, you often forget to think about next moves, resulting in bad moves soon after.
     - [Emanuel Lasker] "When you see a good move, look for a better one."
+- *Compare card combos*: When comparing vastly difference lines, examine their underlying card combos and comtemplate which is better
 - **Disguise** you actions by leaving Sponsors or Assoc at a high strength, if it doesn't hurt you
 - Queue up for a turn-based game at ~7:00pm, to minimize time zone differences with players from Asia or Europe
+	- Avoid players from Europe if you want the game to go fast, unless you can play during daytime
 - **Scouting**: Analyze oppo's game history beforehand to understand their play patterns
+- **Systems of Records**: Always update *Oppo Hand* and *Oppo Knowledge* whenever a card is taken from display
+- *Play around oppo Attacks*
+- Consider oppo's *threaten BREAK* and *natural BREAK*
 - Oppo multi-table 10+ games => distracted
 - To find the best move, calculate candidate moves and compare
     - Evaluate with general principles before calculating deep, else you might lose the big picture
     - When faced with multiple complicated lines, go through them the same number of turns and observe the differences
 - When calculating variations, do not forget that you can also cause the BREAK
 - When calculating variations, use this template for action sequence, progress and money at end of line
-    - e.g.) {Animals Assoc Sponsor Cards Build BR? ?H ?X ?rep ?ap ?CP =?pt $? K$$? $$$? BR:[snap, 2-size, 1CP]}
+    - e.g.) {[Clever?] Animals Assoc Sponsors Cards Build [Pilfer] BR? ?H ?X ?rep ?ap ?CP =?pt $? K$$? $$$? BR[??]}
 - Notes Template:
 ```
 # Strategy
@@ -723,12 +942,14 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
 # Display Interest
 # Action
 # Oppo Read
+# Oppo Actions
 # Oppo Hand
 # Oppo Knowledge
 # Discard
 - (Animals)
 - (Sponsors)
 - (Projects)
+- (Endgames)
 ```
 - **Simulation**: Assume you are gonna draw a certain representative card, and see how it plays out
 - To avoid AP-ing too much, choose a decent line to calculate out then consider how to tune it
@@ -737,6 +958,7 @@ TODO (NoWondersTV video, pilfering monkey from PZoo, X-back Assoc/Build implies 
 - Oppo **Polarized Breaking**: When there are two polarizing lines to calculate, on whether oppo advances break or not, consolidate the commonalities and isolate the few different actions you will be taking
     - Often your own actions will be quite similar :)
 - **Card Prophylaxis**: When deciding which cards to draw, if you are not gonna play them this round, you can simply consider which cards you need in your hand at the start of your next round
+	- However, *Near Good* > *Card Prophylaxis*
 - Skim through CP_track, Assoc board, both player's board, REP_track and display before making a move
 - Look for miracle plays utilizing placement bonuses
 - Check which PZoos and Univs have already been taken this round
