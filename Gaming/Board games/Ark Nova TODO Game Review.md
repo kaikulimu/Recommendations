@@ -2335,7 +2335,7 @@ Move #190 Should I Release Wolf before Sec Bird?
 		- Might let oppo steal donate $5/$7 from you easier
 			+ Should only make a difference vs `AS Tortoise` or `Giraffe`, in this round
 Move #235 Choices (Critical)
-	{~12 turns}
+	{~11 turns}
 	1.a. Cards 5 snap Ibex (BR2 +1H) -> Sponsors 5 Expert Africa clever down Build or Assoc if you know oppo won't BREAK (-1H +1ap) -> Animals 5U Sec Bird clever down Cards?, + ?? (can be Grass Snake) (-1H +1rep +4ap +1CP -$14 +$$$1) -> {Cards Animals Build Sponsors Assoc BR2 5H[Elephant, Ibex, Release Bird, Geological, Primate Breed] 4X 7rep 25ap 9CP =29pt $28 K$$8 $$$23} ->(if oppo delay BREAK) Sponsors 5 BR 5 BREAK (BR5 +1X +$5) ~> {=5H =5X =$64} -> Assoc 9XXXX 2-Science Univ + Release Bird REP_8 worker, unlock 2-size cover clever down Cards? or snap?, donate $7 or $5 (-1H -4X +1rep -4ap +8CP -$7 -$$$1) -> Build 5 [5 cover $4 + rep?] (-$6 +1rep) -> Animals 5U Asian Elephant + Reindeer or Ibex (-1H +1rep +13ap +1CP +6endpt? -$40 +$$$4) ~> {Animals Build Assoc Sponsors Cards? BR0 3H 1X 9rep 34ap 18CP =64pt $11 K$$8 $$$26 BR[2-size or snap]} -> ... Assoc 5 Asia 5 unlock 3X, donate $12? (+15pt/+18pt) -> Assoc 5XXXX Geological unlock Determination, donate $12? (+9pt/+12pt) ~> Animals N Ibex trigger Cable Car x2 + ?? (+9pt) ~> {97pt/100pt/103pt}
 	    > Likely next Assoc unlock 2-size
 	    + Ibex high value with Cable Car
