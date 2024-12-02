@@ -2334,3 +2334,41 @@ Move #190 Should I Release Wolf before Sec Bird?
 	- `Wolf` gives oppo $3
 		- Might let oppo steal donate $5/$7 from you easier
 			+ Should only make a difference vs `AS Tortoise` or `Giraffe`, in this round
+Move #235 Choices (Critical)
+	{~12 turns}
+	1.a. Cards 5 snap Ibex (BR2 +1H) -> Sponsors 5 Expert Africa clever down Build or Assoc if you know oppo won't BREAK (-1H +1ap) -> Animals 5U Sec Bird clever down Cards?, + ?? (can be Grass Snake) (-1H +1rep +4ap +1CP -$14 +$$$1) -> {Cards Animals Build Sponsors Assoc BR2 5H[Elephant, Ibex, Release Bird, Geological, Primate Breed] 4X 7rep 25ap 9CP =29pt $28 K$$8 $$$23} ->(if oppo delay BREAK) Sponsors 5 BR 5 BREAK (BR5 +1X +$5) ~> {=5H =5X =$64} -> Assoc 9XXXX 2-Science Univ + Release Bird REP_8 worker, unlock 2-size cover clever down Cards? or snap?, donate $7 or $5 (-1H -4X +1rep -4ap +8CP -$7 -$$$1) -> Build 5 [5 cover $4 + rep?] (-$6 +1rep) -> Animals 5U Asian Elephant + Reindeer or Ibex (-1H +1rep +13ap +1CP +6endpt? -$40 +$$$4) ~> {Animals Build Assoc Sponsors Cards? BR0 3H 1X 9rep 34ap 18CP =64pt $11 K$$8 $$$26 BR[2-size or snap]} -> ... Assoc 5 Asia 5 unlock 3X, donate $12? (+15pt/+18pt) -> Assoc 5XXXX Geological unlock Determination, donate $12? (+9pt/+12pt) ~> Animals N Ibex trigger Cable Car x2 + ?? (+9pt) ~> {97pt/100pt/103pt}
+	    > Likely next Assoc unlock 2-size
+	    + Ibex high value with Cable Car
+	        + The value of `Cards 5 snap Ibex` could be worth snapping twice already
+	    + Ibex might give Climbing Park value from Elephant endgame
+	    + Ibex + unlock 2-size can save you lots of money, esp. when money is worth
+	    + You want to play `DISPLAY_1 Reindeer`, which will cost $16 more
+	    + If you play `Asian Elephant` + `Reindeer`, you need to build even less
+	    + Helps `Naturalist Zoo`
+	    - If oppo does not BREAK, will have to do `Sponsors 5X BR5 BREAK -> Assoc N Release Bird + ??`
+	      + Asian Elephant + donate + Silver Lake Determination means income is worth
+	      + Since you haven't upgraded Cards nor unlocked snap, card-draw is a more precious resource => `Sponsor N BR N` saving one card is more worth
+	    - Must BREAK before doing Assoc, arguably bad vs oppo `Sponsors 4 Herpetologist -> Animals 5U Macaw + ?? ->. Assoc 4 5-hand Univ`
+	    - If you do `Assoc 9XXXX 2-Science Univ + Release Bird` next round, then you will only have one worker left and cannot do another project => you might be "forced" to cause last BREAK
+	        + Can do `Assoc 3 PZoo` which might not be the worst
+	        + Ibex Jumping 2 also makes this less bad
+	    - Will give oppo easy access to Release Bird
+	    - Doing Cards allows oppo to BREAK without spending 2Xs
+	1.b. Cards 5 snap Ibex (BR2 +1H) -> Sponsors 5 BR 5 BREAK -> ...
+	{3 turns}
+	2. Sponsors 4 Expert Africa clever down Cards (-1H +1ap +$$$1) -> Build 5 [5_water cover $4, rep] (+1rep -$6) -> Animals 5U REP_8 worker Asian Elephant (-1H +8ap +1CP -$27 +6endpt? +$$$3) -> Assoc 5 2-Science Univ donate $7 or $5 (+3CP -$7) -> {Assoc Animals Build Cards Sponsors BR0 4H[Sec Bird, Release Bird, Geological, Primate Breed] 4X 8rep 29ap 12CP =41pt $2 K$$8 $$$25} ->(if oppo no BREAK) Sponsors 5 BR 5 BREAK
+	    > Likely next Assoc unlock snap
+	    > If you take `Assoc 5 2-Science Univ` now, then you will likely do `Assoc 8XXX PZoo upgrade Cards + project` later
+	        - You prob don't need to upgrade Cards to END
+	        - Give 3X = 3endpt via `Expert Africa`, `Assoc 8XXX PZoo upgrade Cards + project` might be worse
+	    + Build 5 cover rep gives you REP_8 worker
+	    + Can delay BREAK which should benefit you more
+	        + Delaying BREAK could allow more X-backs, which helps your `Expert Africa`
+	        + You have so many projects to do s.t. you don't mind delaying BREAK
+	    + +$$2 compated to Line 1
+	    + Unlock snap is very strong in general
+	        + Unlock snap can snap a sponsor to play with cover Marketing later
+                - You might can END without ever unlocking snap
+	    - If oppo BREAK right before you do `Sponsors 5 BR 5`, things could get awkward for you
+	    - Loses Ibex which is very valuable
+	    - Cannot do `Assoc 9XXXX 2-Science Univ + project`, which is the most efficient way to spend Xs
